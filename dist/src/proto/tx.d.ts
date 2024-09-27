@@ -52,154 +52,56 @@ export declare const Payload: {
     decode(input: _m0.Reader | Uint8Array, length?: number): Payload;
     fromJSON(object: any): Payload;
     toJSON(message: Payload): unknown;
-    create<I extends {
-        contractName?: string | undefined;
-        data?: Uint8Array | undefined;
-    } & {
-        contractName?: string | undefined;
-        data?: Uint8Array | undefined;
-    } & { [K in Exclude<keyof I, keyof Payload>]: never; }>(base?: I): Payload;
-    fromPartial<I_1 extends {
-        contractName?: string | undefined;
-        data?: Uint8Array | undefined;
-    } & {
-        contractName?: string | undefined;
-        data?: Uint8Array | undefined;
-    } & { [K_1 in Exclude<keyof I_1, keyof Payload>]: never; }>(object: I_1): Payload;
+    create<I extends Exact<DeepPartial<Payload>, I>>(base?: I): Payload;
+    fromPartial<I extends Exact<DeepPartial<Payload>, I>>(object: I): Payload;
 };
 export declare const MsgPublishPayloads: {
     encode(message: MsgPublishPayloads, writer?: _m0.Writer): _m0.Writer;
     decode(input: _m0.Reader | Uint8Array, length?: number): MsgPublishPayloads;
     fromJSON(object: any): MsgPublishPayloads;
     toJSON(message: MsgPublishPayloads): unknown;
-    create<I extends {
-        identity?: string | undefined;
-        payloads?: {
-            contractName?: string | undefined;
-            data?: Uint8Array | undefined;
-        }[] | undefined;
-    } & {
-        identity?: string | undefined;
-        payloads?: ({
-            contractName?: string | undefined;
-            data?: Uint8Array | undefined;
-        }[] & ({
-            contractName?: string | undefined;
-            data?: Uint8Array | undefined;
-        } & {
-            contractName?: string | undefined;
-            data?: Uint8Array | undefined;
-        } & { [K in Exclude<keyof I["payloads"][number], keyof Payload>]: never; })[] & { [K_1 in Exclude<keyof I["payloads"], keyof {
-            contractName?: string | undefined;
-            data?: Uint8Array | undefined;
-        }[]>]: never; }) | undefined;
-    } & { [K_2 in Exclude<keyof I, keyof MsgPublishPayloads>]: never; }>(base?: I): MsgPublishPayloads;
-    fromPartial<I_1 extends {
-        identity?: string | undefined;
-        payloads?: {
-            contractName?: string | undefined;
-            data?: Uint8Array | undefined;
-        }[] | undefined;
-    } & {
-        identity?: string | undefined;
-        payloads?: ({
-            contractName?: string | undefined;
-            data?: Uint8Array | undefined;
-        }[] & ({
-            contractName?: string | undefined;
-            data?: Uint8Array | undefined;
-        } & {
-            contractName?: string | undefined;
-            data?: Uint8Array | undefined;
-        } & { [K_3 in Exclude<keyof I_1["payloads"][number], keyof Payload>]: never; })[] & { [K_4 in Exclude<keyof I_1["payloads"], keyof {
-            contractName?: string | undefined;
-            data?: Uint8Array | undefined;
-        }[]>]: never; }) | undefined;
-    } & { [K_5 in Exclude<keyof I_1, keyof MsgPublishPayloads>]: never; }>(object: I_1): MsgPublishPayloads;
+    create<I extends Exact<DeepPartial<MsgPublishPayloads>, I>>(base?: I): MsgPublishPayloads;
+    fromPartial<I extends Exact<DeepPartial<MsgPublishPayloads>, I>>(object: I): MsgPublishPayloads;
 };
 export declare const MsgPublishPayloadsResponse: {
     encode(_: MsgPublishPayloadsResponse, writer?: _m0.Writer): _m0.Writer;
     decode(input: _m0.Reader | Uint8Array, length?: number): MsgPublishPayloadsResponse;
     fromJSON(_: any): MsgPublishPayloadsResponse;
     toJSON(_: MsgPublishPayloadsResponse): unknown;
-    create<I extends {} & {} & { [K in Exclude<keyof I, never>]: never; }>(base?: I): MsgPublishPayloadsResponse;
-    fromPartial<I_1 extends {} & {} & { [K_1 in Exclude<keyof I_1, never>]: never; }>(_: I_1): MsgPublishPayloadsResponse;
+    create<I extends Exact<DeepPartial<MsgPublishPayloadsResponse>, I>>(base?: I): MsgPublishPayloadsResponse;
+    fromPartial<I extends Exact<DeepPartial<MsgPublishPayloadsResponse>, I>>(_: I): MsgPublishPayloadsResponse;
 };
 export declare const MsgPublishPayloadProof: {
     encode(message: MsgPublishPayloadProof, writer?: _m0.Writer): _m0.Writer;
     decode(input: _m0.Reader | Uint8Array, length?: number): MsgPublishPayloadProof;
     fromJSON(object: any): MsgPublishPayloadProof;
     toJSON(message: MsgPublishPayloadProof): unknown;
-    create<I extends {
-        txHash?: Uint8Array | undefined;
-        payloadIndex?: number | undefined;
-        contractName?: string | undefined;
-        proof?: Uint8Array | undefined;
-    } & {
-        txHash?: Uint8Array | undefined;
-        payloadIndex?: number | undefined;
-        contractName?: string | undefined;
-        proof?: Uint8Array | undefined;
-    } & { [K in Exclude<keyof I, keyof MsgPublishPayloadProof>]: never; }>(base?: I): MsgPublishPayloadProof;
-    fromPartial<I_1 extends {
-        txHash?: Uint8Array | undefined;
-        payloadIndex?: number | undefined;
-        contractName?: string | undefined;
-        proof?: Uint8Array | undefined;
-    } & {
-        txHash?: Uint8Array | undefined;
-        payloadIndex?: number | undefined;
-        contractName?: string | undefined;
-        proof?: Uint8Array | undefined;
-    } & { [K_1 in Exclude<keyof I_1, keyof MsgPublishPayloadProof>]: never; }>(object: I_1): MsgPublishPayloadProof;
+    create<I extends Exact<DeepPartial<MsgPublishPayloadProof>, I>>(base?: I): MsgPublishPayloadProof;
+    fromPartial<I extends Exact<DeepPartial<MsgPublishPayloadProof>, I>>(object: I): MsgPublishPayloadProof;
 };
 export declare const MsgPublishPayloadProofResponse: {
     encode(_: MsgPublishPayloadProofResponse, writer?: _m0.Writer): _m0.Writer;
     decode(input: _m0.Reader | Uint8Array, length?: number): MsgPublishPayloadProofResponse;
     fromJSON(_: any): MsgPublishPayloadProofResponse;
     toJSON(_: MsgPublishPayloadProofResponse): unknown;
-    create<I extends {} & {} & { [K in Exclude<keyof I, never>]: never; }>(base?: I): MsgPublishPayloadProofResponse;
-    fromPartial<I_1 extends {} & {} & { [K_1 in Exclude<keyof I_1, never>]: never; }>(_: I_1): MsgPublishPayloadProofResponse;
+    create<I extends Exact<DeepPartial<MsgPublishPayloadProofResponse>, I>>(base?: I): MsgPublishPayloadProofResponse;
+    fromPartial<I extends Exact<DeepPartial<MsgPublishPayloadProofResponse>, I>>(_: I): MsgPublishPayloadProofResponse;
 };
 export declare const MsgRegisterContract: {
     encode(message: MsgRegisterContract, writer?: _m0.Writer): _m0.Writer;
     decode(input: _m0.Reader | Uint8Array, length?: number): MsgRegisterContract;
     fromJSON(object: any): MsgRegisterContract;
     toJSON(message: MsgRegisterContract): unknown;
-    create<I extends {
-        owner?: string | undefined;
-        verifier?: string | undefined;
-        programId?: Uint8Array | undefined;
-        stateDigest?: Uint8Array | undefined;
-        contractName?: string | undefined;
-    } & {
-        owner?: string | undefined;
-        verifier?: string | undefined;
-        programId?: Uint8Array | undefined;
-        stateDigest?: Uint8Array | undefined;
-        contractName?: string | undefined;
-    } & { [K in Exclude<keyof I, keyof MsgRegisterContract>]: never; }>(base?: I): MsgRegisterContract;
-    fromPartial<I_1 extends {
-        owner?: string | undefined;
-        verifier?: string | undefined;
-        programId?: Uint8Array | undefined;
-        stateDigest?: Uint8Array | undefined;
-        contractName?: string | undefined;
-    } & {
-        owner?: string | undefined;
-        verifier?: string | undefined;
-        programId?: Uint8Array | undefined;
-        stateDigest?: Uint8Array | undefined;
-        contractName?: string | undefined;
-    } & { [K_1 in Exclude<keyof I_1, keyof MsgRegisterContract>]: never; }>(object: I_1): MsgRegisterContract;
+    create<I extends Exact<DeepPartial<MsgRegisterContract>, I>>(base?: I): MsgRegisterContract;
+    fromPartial<I extends Exact<DeepPartial<MsgRegisterContract>, I>>(object: I): MsgRegisterContract;
 };
 export declare const MsgRegisterContractResponse: {
     encode(_: MsgRegisterContractResponse, writer?: _m0.Writer): _m0.Writer;
     decode(input: _m0.Reader | Uint8Array, length?: number): MsgRegisterContractResponse;
     fromJSON(_: any): MsgRegisterContractResponse;
     toJSON(_: MsgRegisterContractResponse): unknown;
-    create<I extends {} & {} & { [K in Exclude<keyof I, never>]: never; }>(base?: I): MsgRegisterContractResponse;
-    fromPartial<I_1 extends {} & {} & { [K_1 in Exclude<keyof I_1, never>]: never; }>(_: I_1): MsgRegisterContractResponse;
+    create<I extends Exact<DeepPartial<MsgRegisterContractResponse>, I>>(base?: I): MsgRegisterContractResponse;
+    fromPartial<I extends Exact<DeepPartial<MsgRegisterContractResponse>, I>>(_: I): MsgRegisterContractResponse;
 };
 /** Msg defines the module Msg service. */
 export interface Msg {

@@ -1,5 +1,6 @@
 export type ContractInfo = {
     verifier: string;
+    contract_name: string;
     program_id: string;
     state_digest: string;
 };

@@ -34,7 +34,7 @@ export function persistentRef<T>(key: string, initialValue: T) {
 
 export const getNetworkApiUrl = (network: string) => {
     return {
-        localhost: "http://localhost:1317",
+        localhost: "http://localhost:4321",
         devnet: "https://api.devnet.hyle.eu",
     }[network];
 };

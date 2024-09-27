@@ -1,16 +1,17 @@
 export type BlockInfo = {
     hash: string;
+    parent_hash: string;
     height: number;
     timestamp: Date;
-    txs: string[];
+    txs: [{
+        hash: string;
+    }] | string[];
 };
 export declare class BlockStore {
     network: string;
     blockData: Record<string, BlockInfo>;
     blocks: {
-        header: {
-            height: number;
-        };
+        height: number;
         num_txs: number;
     }[];
     constructor(network: string);

@@ -1,6 +1,6 @@
 import { deserByteArray } from "./ByteArray";
 import { MsgPublishPayloads } from "./proto/tx";
-import { getParsedTx, TransactionInfo } from "./transactions";
+import { TransactionInfo } from "./transactions";
 
 export class Erc20Parser {
     contractName = "erc20";
@@ -15,9 +15,9 @@ export class Erc20Parser {
     }
 
     consumeTx(tx: TransactionInfo) {
-        if (tx.type !== "/hyle.zktx.v1.MsgPublishPayloads") return;
-        const msg = getParsedTx<MsgPublishPayloads>(tx);
-        this.consumePayload(msg, tx.hash);
+        if (tx.type !== "Blob") return;
+        //const msg = getParsedTx<MsgPublishPayloads>(tx);
+        //this.consumePayload(msg, tx.tx_hash);
     }
 
     consumePayload(msg: MsgPublishPayloads, hash: string) {
