@@ -1,4 +1,4 @@
-import { getNetworkApiUrl, getNetworkRpcUrl } from "./network";
+import { getNetworkApiUrl } from "./network";
 import { MsgPublishPayloadProof, MsgPublishPayloads, MsgRegisterContract } from "./proto/tx";
 import { Tx as CosmosTx } from "cosmjs-types/cosmos/tx/v1beta1/tx";
 import { base64ToUint8Array } from "@/utils";
@@ -134,16 +134,17 @@ export class TransactionsStore {
 
     async loadContractTxs(contract_name: string) {
         // TODO: load register TXs as well
-        //const response = await fetch(
+        // const response = await fetch(
         //    `${getNetworkRpcUrl(
         //        this.network,
         //    )}/tx_search?query="hyle.zktx.v1.EventPayload.contract_name='\\"${contract_name}\\"'"&page=1&per_page=50&order_by="asc"&match_events=true`,
-        //);
-        //const txs: TransactionInfo[] = /*transactions.value = */ await response.json();
-        //for (const tx of txs) {
+        // );
+        // const txs: TransactionInfo[] = /*transactions.value = */ await response.json();
+        // for (const tx of txs) {
         //    if (this.transactionData?.[tx.tx_hash]?.tx_hash) continue;
         //    this.transactionData[tx.tx_hash] = tx;
-        //}
+        // }
+        console.log("HERE WE SHOULD BE LOADING ALL PAYLOADS FOR", contract_name)
     }
 }
 

@@ -39,16 +39,9 @@ export const getNetworkApiUrl = (network: string) => {
     }[network];
 };
 
-export const getNetworkRpcUrl = (network: string) => {
-    return {
-        localhost: "http://localhost:26657",
-        devnet: "https://rpc.devnet.hyle.eu",
-    }[network];
-};
-
 export const getNetworkWebsocketUrl = (network: string) => {
     return {
-        localhost: "ws://localhost:26657/websocket",
+        localhost: "ws://localhost:4321/websocket",
         devnet: "wss://rpc.devnet.hyle.eu/websocket",
     }[network];
 };
