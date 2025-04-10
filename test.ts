@@ -9,6 +9,16 @@ import { deserializeAmmAction } from "./src/model/amm";
 import { deserializeIdentityAction } from "./src/model/mmid";
 import { deserializeStakingAction } from "./src/model/staking";
 
+import { AuthService } from "./src/session_keys/seckp256k1";
+import { InMemoryStorage } from "./src/utils";
+
+const backendStorage = new InMemoryStorage();
+
+const authService = new AuthService(backendStorage);
+authService.generateSessionKey();
+const blob = authService.signMessageAsBlob("test", "test");
+console.log(blob);
+
 var node = new NodeApiHttpClient("https://rest-api.devnet.hyle.eu");
 var indexer = new IndexerApiHttpClient("https://rest-api.devnet.hyle.eu");
 
